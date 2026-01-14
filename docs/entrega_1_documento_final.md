@@ -68,7 +68,6 @@ O objetivo desta entrega é formalizar o escopo inicial do projeto, identificar 
 
 Os interessados, ou stakeholders, são todos os indivíduos ou grupos que são afetados pelo sistema ou que podem influenciar seu desenvolvimento. A identificação correta é crucial para o levantamento completo dos requisitos.
 
-<a id="tabela-1"></a>
 **Tabela 1: Interessados do Sistema**
 
 | Categoria | Interessado | Descrição do Interesse |
@@ -111,7 +110,6 @@ Os objetivos não-funcionais especificam critérios de qualidade e restrições 
 
 O diagrama a seguir ilustra as principais interações entre os atores e os casos de uso identificados para o sistema.
 
-<a id="figura-1"></a>
 **Figura 1: Diagrama de Casos de Uso do Sistema de Reserva de Hotéis**
 
 ![Diagrama de Casos de Uso](use_case_diagram.png)
@@ -121,7 +119,6 @@ O diagrama a seguir ilustra as principais interações entre os atores e os caso
 
 Conforme a metodologia do Processo Unificado, detalhamos nesta fase os 20% de casos de uso considerados mais essenciais para o negócio.
 
-<a id="tabela-2"></a>
 **Tabela 2: Detalhamento do Caso de Uso UC01**
 
 | Campo | Descrição |
@@ -132,7 +129,6 @@ Conforme a metodologia do Processo Unificado, detalhamos nesta fase os 20% de ca
 | **Atores** | Hóspede (Primário), Sistema de Pagamento (Secundário) |
 | **Fluxo Principal** | 1. Hóspede informa datas e busca quartos.<br>2. Sistema exibe opções disponíveis.<br>3. Hóspede seleciona quarto e informa dados pessoais.<br>4. Sistema invoca o **UC02: Processar Pagamento**.<br>5. Após sucesso, a reserva é criada, o quarto é marcado como indisponível e um e-mail de confirmação é enviado. |
 
-<a id="tabela-3"></a>
 **Tabela 3: Detalhamento do Caso de Uso UC02**
 
 | Campo | Descrição |
@@ -143,7 +139,6 @@ Conforme a metodologia do Processo Unificado, detalhamos nesta fase os 20% de ca
 | **Atores** | Sistema (Primário), Sistema de Pagamento (Secundário) |
 | **Fluxo Principal** | 1. Sistema exibe formulário seguro de pagamento.<br>2. Hóspede insere os dados do cartão de crédito ou seleciona PIX.<br>3. Sistema envia a transação para o gateway de pagamento.<br>4. Gateway autoriza a transação e retorna sucesso.<br>5. Sistema registra o pagamento e confirma a reserva. |
 
-<a id="tabela-4"></a>
 **Tabela 4: Detalhamento do Caso de Uso UC03**
 
 | Campo | Descrição |
