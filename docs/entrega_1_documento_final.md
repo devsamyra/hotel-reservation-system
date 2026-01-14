@@ -57,8 +57,8 @@ O objetivo desta entrega é formalizar o escopo inicial do projeto, identificar 
 
 ### 2.2. Links de Acesso
 
-*   **URL do Repositório de Código-Fonte:** `file:///home/ubuntu/hotel-reservation-system`
-*   **URL do Quadro de Acompanhamento:** `file:///home/ubuntu/hotel-reservation-system/docs/project_tracking.md`
+*   **URL do Repositório de Código-Fonte:** https://github.com/devsamyra/hotel-reservation-system
+*   **URL do Quadro de Acompanhamento:** https://github.com/users/devsamyra/projects/1
 
 ---
 
