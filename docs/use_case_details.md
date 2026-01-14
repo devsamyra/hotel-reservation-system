@@ -1,4 +1,4 @@
-_Este documento detalha os 20% de casos de uso considerados mais essenciais para o Sistema de Reserva de Hotéis, conforme solicitado na fase de Concepção do projeto._
+Este documento apresenta a especificação detalhada dos casos de uso priorizados como essenciais para a fase de Concepção do projeto. A seleção destes casos de uso, que representam o núcleo funcional do sistema, segue a recomendação de focar nos 20% de requisitos mais críticos durante as fases iniciais do Processo Unificado [4].
 
 ---
 

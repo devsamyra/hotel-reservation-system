@@ -43,9 +43,9 @@
 
 ## 1. Introdução
 
-Este documento apresenta a fase de **Concepção** do projeto de desenvolvimento de um **Sistema de Reserva de Hotéis**. O trabalho é realizado no âmbito da disciplina de Prática Profissional em Análise e Desenvolvimento de Sistemas e segue os princípios do Processo Unificado, um modelo de desenvolvimento iterativo e incremental [1].
+Este documento apresenta a fase de **Concepção** do projeto de desenvolvimento de um **Sistema de Reserva de Hotéis**. O trabalho é realizado no âmbito da disciplina de Prática Profissional em Análise e Desenvolvimento de Sistemas e segue os princípios do Processo Unificado (PU), um modelo de desenvolvimento de software iterativo e incremental que organiza o ciclo de vida em quatro fases distintas: Concepção, Elaboração, Construção e Transição [1, 2].
 
-O objetivo desta entrega é formalizar o escopo inicial do projeto, identificar os principais interessados, definir os objetivos funcionais e não-funcionais, e detalhar os casos de uso mais críticos que nortearão as primeiras iterações de desenvolvimento. A concepção é a fase fundamental para estabelecer uma visão clara do produto e garantir o alinhamento entre as necessidades do negócio e a solução técnica a ser construída.
+O objetivo desta entrega é formalizar o escopo inicial do projeto, identificar os principais interessados (stakeholders), definir os objetivos funcionais e não-funcionais, e detalhar os casos de uso mais críticos que nortearão as primeiras iterações de desenvolvimento, conforme preconizado por metodologias de modelagem de software [3, 5]. A concepção é a fase fundamental para estabelecer uma visão clara do produto e garantir o alinhamento entre as necessidades do negócio e a solução técnica a ser construída.
 
 ---
 
@@ -116,7 +116,6 @@ O diagrama a seguir ilustra as principais interações entre os atores e os caso
 
 ![Diagrama de Casos de Uso](use_case_diagram.png)
 
-*Fonte: Elaborado pelo autor.*
 
 ### 4.2. Descrição Detalhada dos Casos de Uso Principais
 
@@ -159,4 +158,12 @@ Conforme a metodologia do Processo Unificado, detalhamos nesta fase os 20% de ca
 
 ## 5. Referências
 
-[1] LARMAN, C. **Utilizando UML e padrões**: uma introdução à análise e ao projeto orientados a objetos e desenvolvimento iterativo. 3. ed. Porto Alegre: Bookman, 2011.
+[1] JACOBSON, I.; BOOCH, G.; RUMBAUGH, J. **The Unified Software Development Process**. Reading: Addison-Wesley, 1999.
+
+[2] SOMMERVILLE, I. **Engenharia de Software**. 9. ed. São Paulo: Pearson Prentice Hall, 2011.
+
+[3] GOMAA, H. **Software Modeling and Design: UML, Use Cases, Patterns, and Software Architectures**. Cambridge: Cambridge University Press, 2011.
+
+[4] KRUCHTEN, P. **The Rational Unified Process: An Introduction**. 3. ed. Reading: Addison-Wesley, 2003.
+
+[5] LARMAN, C. **Utilizando UML e padrões**: uma introdução à análise e ao projeto orientados a objetos e desenvolvimento iterativo. 3. ed. Porto Alegre: Bookman, 2011.
