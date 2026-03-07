@@ -21,9 +21,12 @@ O desenvolvimento segue um modelo iterativo e incremental, alinhado com as quatr
 3.  **Construção**: Implementação e codificação do software.
 4.  **Transição**: Implantação e entrega final do produto.
 
-## Contato
+## Integrantes do Grupo
 
-- **Autora:** Samyra Driele Alborgueti
+- Gabriela Refosco
+- Julio de Moura Stelzer
+- Lazaro Junior dos Santos
+- Samyra Driele Alborgueti
 - **Instituição:** Universidade Presbiteriana Mackenzie
 - **Professor:** Tomaz Mikio Sasaki
 S.

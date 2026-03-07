@@ -53,6 +53,9 @@ O objetivo desta entrega é formalizar o escopo inicial do projeto, identificar 
 
 ### 2.1. Integrantes do Grupo
 
+*   Gabriela Refosco
+*   Julio de Moura Stelzer
+*   Lazaro Junior dos Santos
 *   Samyra Driele Alborgueti
 
 ### 2.2. Links de Acesso
