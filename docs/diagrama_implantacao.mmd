@@ -1,0 +1,24 @@
+graph TD
+    subgraph Client_Device [Dispositivo do Hóspede]
+        Browser[Navegador Web]
+        Frontend[Aplicação Frontend - React/Vite]
+        Browser --- Frontend
+    end
+
+    subgraph App_Server [Servidor de Aplicação - Vercel/Heroku]
+        NodeEnv[Ambiente Node.js]
+        Backend[API Backend - Express/Node.js]
+        NodeEnv --- Backend
+    end
+
+    subgraph DB_Server [Servidor de Banco de Dados - Supabase/PostgreSQL]
+        DB[(Banco de Dados Relacional)]
+    end
+
+    subgraph Payment_Gateway [Gateway de Pagamento - Stripe/Mercado Pago]
+        PaymentAPI[API de Pagamento]
+    end
+
+    Client_Device -- "HTTPS / JSON" --> App_Server
+    App_Server -- "TCP/IP / SQL" --> DB_Server
+    App_Server -- "HTTPS / JSON" --> Payment_Gateway
