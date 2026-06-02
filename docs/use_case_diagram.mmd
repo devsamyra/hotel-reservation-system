@@ -1,0 +1,68 @@
+graph TB
+    subgraph Sistema["Sistema de Reserva de Hotéis"]
+        UC01["UC01: Fazer Reserva"]
+        UC02["UC02: Processar Pagamento"]
+        UC03["UC03: Gerenciar Disponibilidade"]
+        UC04["UC04: Modificar Reserva"]
+        UC05["UC05: Cancelar Reserva"]
+        UC06["UC06: Realizar Check-in"]
+        UC07["UC07: Realizar Check-out"]
+        UC08["UC08: Consultar Histórico"]
+        UC09["UC09: Gerenciar Cadastro"]
+        UC10["UC10: Gerar Relatório"]
+        UC11["UC11: Configurar Tarifas"]
+        UC12["UC12: Criar Promoção"]
+        UC13["UC13: Enviar Notificação"]
+        UC14["UC14: Gerar Fatura"]
+        UC15["UC15: Gerenciar Usuários"]
+    end
+
+    Hospede["👤 Hóspede"]
+    Gerente["👤 Gerente de Hotel"]
+    Recepcionista["👤 Recepcionista"]
+    Admin["👤 Administrador"]
+    SistemaPagamento["🔗 Sistema de Pagamento"]
+    SistemaEmail["🔗 Sistema de E-mail"]
+
+    Hospede -->|usa| UC01
+    Hospede -->|usa| UC04
+    Hospede -->|usa| UC05
+    Hospede -->|usa| UC08
+    Hospede -->|usa| UC09
+
+    Gerente -->|usa| UC03
+    Gerente -->|usa| UC10
+    Gerente -->|usa| UC11
+    Gerente -->|usa| UC12
+
+    Recepcionista -->|usa| UC06
+    Recepcionista -->|usa| UC07
+
+    Admin -->|usa| UC15
+
+    UC01 -->|inclui| UC02
+    UC02 -->|interage| SistemaPagamento
+    UC04 -->|inclui| UC02
+    UC06 -->|inclui| UC14
+    UC07 -->|inclui| UC14
+    UC01 -->|dispara| UC13
+    UC05 -->|dispara| UC13
+    UC06 -->|dispara| UC13
+
+    SistemaEmail -.->|recebe| UC13
+
+    style UC01 fill:#4CAF50,color:#fff
+    style UC02 fill:#4CAF50,color:#fff
+    style UC03 fill:#4CAF50,color:#fff
+    style UC04 fill:#2196F3,color:#fff
+    style UC05 fill:#2196F3,color:#fff
+    style UC06 fill:#2196F3,color:#fff
+    style UC07 fill:#2196F3,color:#fff
+    style UC08 fill:#2196F3,color:#fff
+    style UC09 fill:#2196F3,color:#fff
+    style UC10 fill:#2196F3,color:#fff
+    style UC11 fill:#2196F3,color:#fff
+    style UC12 fill:#2196F3,color:#fff
+    style UC13 fill:#FF9800,color:#fff
+    style UC14 fill:#FF9800,color:#fff
+    style UC15 fill:#9C27B0,color:#fff

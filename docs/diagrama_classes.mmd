@@ -1,0 +1,50 @@
+classDiagram
+    class HospedeController {
+        +cadastrarHospede(HospedeDTO)
+        +buscarHospede(String cpf)
+    }
+
+    class ReservaController {
+        +criarReserva(ReservaDTO)
+        +cancelarReserva(Long id)
+        +buscarDisponibilidade(Date, Date)
+    }
+
+    class PagamentoController {
+        +processarPagamento(PagamentoDTO)
+        +estornarPagamento(Long id)
+    }
+
+    class ReservaService {
+        +validarDatas(Date, Date)
+        +calcularValorTotal(Reserva)
+        +confirmarReserva(Long id)
+    }
+
+    class PagamentoService {
+        +comunicarGateway(Pagamento)
+        +validarDadosCartao(CartaoDTO)
+    }
+
+    class ReservaRepository {
+        +save(Reserva)
+        +findById(Long)
+        +findByPeriodo(Date, Date)
+    }
+
+    class PagamentoRepository {
+        +save(Pagamento)
+        +findByReservaId(Long)
+    }
+
+    class GatewayPagamento {
+        <<interface>>
+        +autorizar(Transacao)
+    }
+
+    ReservaController ..> ReservaService : usa
+    PagamentoController ..> PagamentoService : usa
+    ReservaService ..> ReservaRepository : usa
+    PagamentoService ..> PagamentoRepository : usa
+    PagamentoService ..> GatewayPagamento : interage
+    ReservaService ..> PagamentoService : solicita

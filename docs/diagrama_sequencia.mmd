@@ -1,0 +1,31 @@
+sequenceDiagram
+    autonumber
+    actor H as Hóspede
+    participant UI as Interface (Web/Mobile)
+    participant RC as ReservaController
+    participant RS as ReservaService
+    participant PS as PagamentoService
+    participant GW as GatewayPagamento
+    participant DB as Banco de Dados
+
+    H->>UI: Solicita Reserva (Datas, Quarto)
+    UI->>RC: criarReserva(ReservaDTO)
+    RC->>RS: validarDatas(checkIn, checkOut)
+    RS->>DB: buscarDisponibilidade(checkIn, checkOut)
+    DB-->>RS: Disponível
+    RS->>RS: calcularValorTotal()
+    RS-->>RC: Reserva Pendente Criada
+    RC-->>UI: Solicita Pagamento
+    UI->>H: Exibe Formulário de Pagamento
+    H->>UI: Insere Dados do Cartão
+    UI->>RC: processarPagamento(PagamentoDTO)
+    RC->>PS: processarPagamento(Pagamento)
+    PS->>GW: autorizar(Transacao)
+    GW-->>PS: Autorizado
+    PS->>DB: salvarPagamento(Pagamento)
+    PS-->>RC: Pagamento Confirmado
+    RC->>RS: confirmarReserva(reservaId)
+    RS->>DB: atualizarStatusReserva(Confirmada)
+    RS-->>RC: Reserva Confirmada
+    RC-->>UI: Exibe Sucesso
+    UI-->>H: Mostra Confirmação da Reserva

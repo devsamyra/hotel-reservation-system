@@ -1,0 +1,55 @@
+classDiagram
+    class Hospede {
+        +String nome
+        +String email
+        +String telefone
+        +String cpf
+    }
+
+    class Reserva {
+        +DateTime dataReserva
+        +DateTime checkIn
+        +DateTime checkOut
+        +StatusReserva status
+        +Double valorTotal
+    }
+
+    class Quarto {
+        +String numero
+        +TipoQuarto tipo
+        +Double precoDiaria
+        +StatusQuarto status
+    }
+
+    class Pagamento {
+        +DateTime dataPagamento
+        +Double valor
+        +MetodoPagamento metodo
+        +StatusPagamento status
+    }
+
+    class Promocao {
+        +String codigo
+        +Double desconto
+        +DateTime validade
+    }
+
+    class Funcionario {
+        +String nome
+        +String cargo
+        +String login
+    }
+
+    class Hotel {
+        +String nome
+        +String endereco
+        +String cnpj
+    }
+
+    Hotel "1" *-- "many" Quarto : possui
+    Hotel "1" *-- "many" Funcionario : emprega
+    Hospede "1" -- "many" Reserva : realiza
+    Reserva "many" -- "1" Quarto : reserva
+    Reserva "1" -- "1" Pagamento : gera
+    Reserva "many" -- "0..1" Promocao : aplica
+    Funcionario "1" -- "many" Reserva : gerencia
